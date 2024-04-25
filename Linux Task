@@ -1,0 +1,63 @@
+1. *File Management:*
+   - Task: Can you create a new directory named "my_project" in your home directory?
+      $ cd ~      --This command will change the directory to the home directory of the user.
+      $ mkdir my_project       --This command will create new directory with name of the directory as my_project.
+
+   - Task: Move a file named "example.txt" from your Downloads directory to the "my_project" directory.
+      $ cd ~        --This command will change the directory to the home directory of the user.
+      $ mkdir Downloads       --This command will create new directory with name of the directory as Downloads.
+      $ touch /home/imran/Downloads/example.txt       --This command will create new file with name of the file as example.txt in Downloads directory.
+      $ mv /home/imran/Dowmloads/example.txt /home/imran/my_project
+
+   - Task: List the contents of the "my_project" directory.
+      $ cd ~        --This command will change the directory to the home directory of the user.
+      $ ls my_project    --This command will list the contents of "my_project" directory.
+              OR
+      $ cd /home/imran/my_project        --This command will change the directory to the my_project directory.
+      $ ls    --This command will list the contents of CURRENT directory which "my_project" directory.
+
+   - Task: Delete the file "example.txt" from the "my_project" directory.
+      $ rm /home/imran/my_project/example.txt      --This command will delete example.txt file from the "my_project" directory.
+
+2. *Text Editing:*
+   $ nano message.txt        --command to create a new text file named "message.txt" using the Nano text editor?
+   post writing the content on the editor
+   press control + o to save the content
+   then press control + x to exit the Nano text editor.
+
+3. *User Management:*
+   - Task: Create a new user account named "newuser".
+      $ sudo useradd newuser    --This command will Create a new user account named "newuser".
+      $ sudo id newuser    ----This command will check whether new user account named "newuser" is created or not.
+
+   - Task: Change the password for the "newuser" account to something secure.
+      $ sudo passwd newuser            --This command will Change the password for the "newuser" account.
+        New Password : newuser123      -- Enter the password
+        Retype New Password : newuser123      --confirm the password
+
+   - Task: Delete the "newuser" account from the system.
+      $ sudo userdel newuser        --This command will delete account named "newuser".
+      $ sudo id newuser      --This command is used to check whether "newuser" is deleted or not.
+
+4. *Package Management:*
+   - Task: Update the package list using the package manager.
+      $ sudo apt-get update        --This command will Update the package list using the package manager.
+
+   - Task: Install a new package of your choice.
+      $ sudo apt install nmap      --This command will Install a new package called nmap in the system.
+
+   - Task: Remove the installed package from your system.
+      $ sudo apt remove nmap      --This command will Remove the installed package nmap from the system.
+
+5. *File Permissions:*
+   - Task: Check the permissions of the "message.txt" file.
+      $ ls -l message.txt      --This command is used to Check the permissions of the "message.txt" file where ls signifies list and
+                                  The -l option signifies the long list format.  we can see the file permissions, the number of links, 
+                                  owner name, owner group, file size, time of last modification, and the file or directory name.
+
+   - Task: Change the permissions of the "message.txt" file to make it readable, writable, and executable by the owner.
+      $ chmod u+rwx message.txt    --This command will change the the permissions of the "message.txt" file to readable, writable, and executable by the owner.
+                                      u represents the owner or user and r,w and x signifies readable, writable, and executable permissions respectively.
+
+   - Task: Verify the changes to permissions.
+      $ ls -l message.txt     -- This command is used to check if permissions of the file are changed or not.
